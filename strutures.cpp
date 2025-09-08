@@ -5,6 +5,7 @@
 #include <vector>
 using namespace std;
 
+// building the structure for restaurant
 struct Restaurant {
     string name;
     string address;
@@ -16,6 +17,7 @@ struct Restaurant {
 Restaurant populateRest();
 void diplayRest(const Restaurant &);
 
+// main function
 int main() {
     vector<Restaurant> restaurants;
     int numRest;
@@ -35,6 +37,8 @@ int main() {
     return 0;
 }
 
+// populateRest() gets user input to populate the structure
+// returns: a Restaurant structure
 Restaurant populateRest() {
     Restaurant temp;
     cout << "Enter the name: ";
@@ -55,6 +59,8 @@ Restaurant populateRest() {
     return temp;
 }
 
+// diplayRest() displays the information of a Restaurant structure in a formatted manner
+// parameters: a Restaurant structure
 void diplayRest(const Restaurant &r) {
     cout << "Restaurant Name: " << r.name << endl;
     cout << "IRL Address: " << r.address << endl;
